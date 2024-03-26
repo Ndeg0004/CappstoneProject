@@ -14,6 +14,7 @@ public class ImageLog extends Log {
         return imageFormat;
     }
 
+    //guard clause implemented
     public void attachFile(String fileName, String format, String content, Long size) throws Exception {
         if (!format.equals("PNG") && !format.equals("JPEG")) {
             throw new Exception("Invalid image format");
@@ -36,15 +37,15 @@ public class ImageLog extends Log {
         System.out.println("Image log validated.");
     }
     
-    
-    public void attachedFile(String fileName, String format, String content, Long size) {
-		 this.attachedFileName = fileName;
-		 this.attachedFileFormat = format;
-		this.attachedFileContent = content;
-		this.attachedFileSize = size;
-		System.out.println("Textlog file atteched" + fileName);
+    //reduntent code
+    //public void attachedFile(String fileName, String format, String content, Long size) {
+	//	 this.attachedFileName = fileName;
+	//	 this.attachedFileFormat = format;
+	//	this.attachedFileContent = content;
+	//	this.attachedFileSize = size;
+	//	System.out.println("Textlog file atteched" + fileName);
 		
-    }
+  //  }
 		
 	public String toString(){ 
 		return super.toString() +
